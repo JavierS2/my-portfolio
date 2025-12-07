@@ -1,0 +1,17 @@
+@import "tailwindcss";
+/* 1. Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Estilos globales */
+body {
+  @apply antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+}
+
+/* 3. Clase para el fondo del hero (degradado suave) */
+.hero-bg {
+  @apply bg-gradient-to-br from-[#f4e4ff] via-white to-[#e1f9ff];
+}
