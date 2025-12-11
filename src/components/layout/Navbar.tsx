@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 
 const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#habilidades", label: "Habilidades" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#experiencia", label: "Experiencia" },
+  { href: "/home", label: "Inicio" },
+  { href: "/about-me", label: "Sobre mí" },
+  { href: "/skills", label: "Habilidades" },
+  { href: "/projects", label: "Proyectos" },
+  { href: "/experience", label: "Experiencia" },
 ];
 
 export default function Navbar() {
@@ -43,9 +43,12 @@ export default function Navbar() {
           "
         >
           {/* Logo */}
-          <div className="text-sm md:text-base font-extrabold tracking-[0.28em] text-indigo-500">
+          <a
+            href="/home"
+            className="text-sm md:text-base font-extrabold tracking-[0.28em] text-indigo-500 transition hover:text-indigo-600"
+          >
             JAVIER
-          </div>
+          </a>
 
           {/* Links desktop */}
           <div className="hidden md:flex items-center gap-6">
@@ -65,11 +68,10 @@ export default function Navbar() {
               ))}
             </ul>
 
-            {/* Botón contacto con hover más creativo */}
             <PrimaryButton href="#about-me">Contacto</PrimaryButton>
           </div>
 
-          {/* Botón hamburguesa (solo móvil) */}
+          {/* Botón hamburguesa */}
           <button
             type="button"
             onClick={toggleMenu}

@@ -1,6 +1,7 @@
 "use client";
 import { motion, type Variants } from "framer-motion";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import Tag from "@/components/ui/Tag"
 
 const container: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -51,7 +52,7 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* Nombre + línea decorativa */}
+        {/* Nombre */}
         <motion.div
           variants={item}
           className="w-full flex flex-col items-center gap-3"
@@ -75,35 +76,17 @@ export default function HeroSection() {
 
         {/* CTA */}
         <motion.div variants={item} className="pt-2">
-          <PrimaryButton href="#sobre-mi">Conóceme</PrimaryButton>
+          <PrimaryButton href="/about-me">Conóceme</PrimaryButton>
         </motion.div>
 
-        {/* Pills creativas, ahora siempre centradas */}
+        {/* Tags */}
         <motion.div
           variants={item}
           className="pt-6 flex flex-wrap justify-center gap-3 text-[12px] md:text-[13px]"
         >
-          {/* Pill 1 */}
-          <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/40 backdrop-blur px-4 py-2 shadow-sm">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-slate-700 font-medium">Disponible</span>
-          </div>
-
-          {/* Pill 2 */}
-          <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/40 backdrop-blur px-4 py-2 shadow-sm">
-            <span className="text-indigo-500 text-[14px]">✦</span>
-            <span className="text-slate-700 font-medium">
-              Construyendo interfaces modernas
-            </span>
-          </div>
-
-          {/* Pill 3 */}
-          <div className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/40 backdrop-blur px-4 py-2 shadow-sm">
-            <span className="text-sky-500 text-[14px]">⚡</span>
-            <span className="text-slate-700 font-medium">
-              Next.js • Tailwind • React
-            </span>
-          </div>
+          <Tag text="Disponible" />
+          <Tag text="Construyendo interfaces modernas" icon="✦" />
+          <Tag text="Next.js • Tailwind • React" icon="⚡" />
         </motion.div>
       </motion.div>
     </section>
