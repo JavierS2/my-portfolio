@@ -96,9 +96,9 @@ export default function ProfileCardSection() {
                 Hola, soy Javier
               </p>
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 leading-snug">
-                I am Professional User
+                Estudiante de
                 <br />
-                Experience Designer
+                Ingeniería de Sistemas
               </h2>
             </motion.div>
 
@@ -107,13 +107,12 @@ export default function ProfileCardSection() {
               className="space-y-3 text-sm md:text-[15px] text-slate-600 leading-relaxed"
             >
               <p>
-                I design and develop services for customers specializing
-                creating stylish, modern websites, web services and online
-                stores. My passion is to design digital user experiences.
+                Desarrollo aplicaciones web modernas utilizando arquitecturas escalables y buenas prácticas de ingeniería. 
+                Cuento con bases sólidas en Frontend.
               </p>
               <p>
-                I design and develop services for customers specializing
-                creating stylish, modern websites, web services.
+                Mi foco principal es el desarrollo Backend, centrándome en la creación de
+                APIs robustas, lógica de negocio eficiente y manejo de datos.
               </p>
             </motion.div>
 
@@ -123,6 +122,7 @@ export default function ProfileCardSection() {
               <DownloadCvButton href="/cv/javier-santodomingo.pdf">
                 Descargar CV
               </DownloadCvButton>
+              <PrimaryButton href="#proyectos">Mis habilidades</PrimaryButton>
             </motion.div>
           </motion.div>
         </motion.div>
